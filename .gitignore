@@ -1,0 +1,18 @@
+# Dependencias: se reinstalan con "npm install" (pesan cientos de MB)
+/node_modules
+# Compilados: se regeneran con "ionic build"
+/www
+/dist
+/.angular
+# Proyectos nativos generados por Capacitor (se recrean con "npx cap add android")
+/android/app/build
+/android/.gradle
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+# Secretos: nunca se suben a GitHub
+*.keystore
+*.jks
+.env

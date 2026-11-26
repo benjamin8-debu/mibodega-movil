@@ -1,0 +1,26 @@
+<!doctype html>
+<!--
+  src/index.html · La ÚNICA página HTML de la app.
+  Ionic/Angular es una SPA (Single Page Application): nunca cambia de archivo HTML,
+  solo cambia el contenido dentro de <app-root> con JavaScript.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>MiBodega</title>
+  <base href="/" />
+  <!-- viewport-fit=cover: usa toda la pantalla, incluso la zona del "notch" del celular -->
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon/favicon.svg" />
+  <!-- Al guardar la app en la pantalla de inicio de un iPhone -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+<body>
+  <!-- Aquí Angular "monta" toda la aplicación -->
+  <app-root></app-root>
+</body>
+</html>

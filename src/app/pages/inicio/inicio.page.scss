@@ -1,0 +1,11 @@
+/* inicio.page.scss · Estilos SOLO de esta página (no afectan a otras) */
+.contador {
+  font-size: 64px;          /* número grande y visible */
+  font-weight: 800;
+  margin: 8px 0 16px;
+  color: var(--ion-color-primary);   /* usa el violeta definido en theme/variables.scss */
+}
+
+ion-card-title ion-icon {
+  vertical-align: middle;   /* alinea el ícono con el texto */
+}

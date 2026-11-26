@@ -1,0 +1,63 @@
+/*
+ * src/theme/variables.scss · Colores de la app (Opción B · Pop Didáctico)
+ * ------------------------------------------------------------------
+ * Ionic pinta sus componentes con VARIABLES CSS. Si cambias --ion-color-primary,
+ * cambian a la vez todos los botones, barras y enlaces con color="primary".
+ * Analogía: es la paleta del pintor; los componentes solo dicen "usa el color primary".
+ * Cada color necesita 6 variantes: base, rgb, contraste (texto encima), shade (más oscuro) y tint (más claro).
+ */
+
+:root {
+  /* Violeta: botones principales y barra superior */
+  --ion-color-primary: #7C3AED;
+  --ion-color-primary-rgb: 124, 58, 237;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #6d33d1;
+  --ion-color-primary-tint: #894eef;
+
+  /* Turquesa: acciones secundarias */
+  --ion-color-secondary: #00B8A9;
+  --ion-color-secondary-rgb: 0, 184, 169;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #00a295;
+  --ion-color-secondary-tint: #1abfb2;
+
+  /* Coral: destacados y alertas suaves */
+  --ion-color-tertiary: #FF5A5F;
+  --ion-color-tertiary-rgb: 255, 90, 95;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #e04f54;
+  --ion-color-tertiary-tint: #ff6a6f;
+
+  /* Verde: confirmaciones */
+  --ion-color-success: #2BB673;
+  --ion-color-success-rgb: 43, 182, 115;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #26a065;
+  --ion-color-success-tint: #40bd81;
+
+  /* Amarillo: advertencias */
+  --ion-color-warning: #FFC93C;
+  --ion-color-warning-rgb: 255, 201, 60;
+  --ion-color-warning-contrast: #1f1147;
+  --ion-color-warning-contrast-rgb: 31, 17, 71;
+  --ion-color-warning-shade: #e0b135;
+  --ion-color-warning-tint: #ffce50;
+
+  /* Rojo: errores y borrar */
+  --ion-color-danger: #E4572E;
+  --ion-color-danger-rgb: 228, 87, 46;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #c94d28;
+  --ion-color-danger-tint: #e76843;
+
+  /* Tipografía y fondo general */
+  --ion-font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  --ion-background-color: #ffffff;
+  --ion-text-color: #1f1147;
+}

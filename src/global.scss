@@ -1,0 +1,29 @@
+/*
+ * src/global.scss · Estilos globales
+ * ---------------------------------------------------------------
+ * Aquí se importan los CSS que Ionic necesita para que sus componentes
+ * se vean bien. Es como el "uniforme" base de toda la app.
+ */
+
+/* Obligatorios: sin ellos los componentes Ionic se ven rotos */
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+
+/* Opcionales: clases utilitarias como ion-padding, ion-text-center, ion-margin-top */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import "@ionic/angular/css/display.css";
+
+/* Modo oscuro automático: sigue la configuración del celular */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Estilos propios reutilizables */
+.tarjeta-pop {
+  border-radius: 18px;               /* esquinas bien redondeadas: estilo "sticker" */
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.15);
+}

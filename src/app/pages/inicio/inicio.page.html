@@ -1,0 +1,67 @@
+<!--
+  inicio.page.html · Plantilla (lo que se VE)
+  - {{ dato }}          → interpolación: muestra el valor de una variable de la clase
+  - (click)="metodo()"  → evento: cuando el usuario toca, ejecuta un método
+  - [(ngModel)]="dato"  → enlace de doble vía: lo que escribes se guarda en la variable y viceversa
+  - @for / @if          → bloques de control de Angular (repetir / mostrar si…)
+-->
+
+<!-- CABECERA: barra superior fija -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>MiBodega</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- CONTENIDO: zona con scroll. fullscreen = se desliza por debajo de la cabecera en iOS -->
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- Tarjeta de bienvenida -->
+  <ion-card class="tarjeta-pop">
+    <ion-card-header>
+      <ion-card-subtitle>Semana 01 · Mi primera app híbrida</ion-card-subtitle>
+      <ion-card-title>
+        <ion-icon name="storefront" color="primary"></ion-icon>
+        {{ saludo }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <!-- label-placement="floating": la etiqueta "flota" hacia arriba al escribir -->
+        <ion-input label="Tu nombre" labelPlacement="floating" placeholder="Ej.: Julio" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tarjeta con contador: eventos (click) -->
+  <ion-card class="tarjeta-pop">
+    <ion-card-header>
+      <ion-card-title>Clientes atendidos hoy</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <p class="contador">{{ clientes }}</p>
+      <ion-button color="tertiary" (click)="restar()" [disabled]="clientes === 0">
+        <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
+      </ion-button>
+      <ion-button color="secondary" (click)="sumar()">
+        <ion-icon slot="start" name="add-circle"></ion-icon>
+        Atender cliente
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Lista: un mismo código, tres plataformas -->
+  <ion-list [inset]="true">
+    @for (p of plataformas; track p.nombre) {
+      <ion-item>
+        <ion-icon slot="start" [name]="p.icono" color="primary"></ion-icon>
+        <ion-label>
+          <h2>{{ p.nombre }}</h2>
+          <p>{{ p.detalle }}</p>
+        </ion-label>
+        <ion-badge slot="end" color="warning">mismo código</ion-badge>
+      </ion-item>
+    }
+  </ion-list>
+
+</ion-content>
