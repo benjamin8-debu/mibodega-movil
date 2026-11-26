@@ -35,6 +35,9 @@ export class InicioPage {
   /** Contador de clientes atendidos (un dato que cambia con los botones) */
   clientes = 0;
 
+  /** Reto: ventas del día en soles (nunca baja de 0) */
+  ventas = 0;
+
   /** Lista que se dibuja con @for en la plantilla */
   plataformas = [
     { icono: 'logo-android', nombre: 'Android', detalle: 'APK / App Bundle con Android Studio' },
@@ -56,6 +59,18 @@ export class InicioPage {
   restar(): void {
     if (this.clientes > 0) {
       this.clientes--;
+    }
+  }
+
+  /** Reto: suma S/ 1 a las ventas del día */
+  sumarVenta(): void {
+    this.ventas++;
+  }
+
+  /** Reto: resta S/ 1, pero nunca baja de 0 */
+  restarVenta(): void {
+    if (this.ventas > 0) {
+      this.ventas--;
     }
   }
 

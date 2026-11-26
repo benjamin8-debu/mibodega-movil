@@ -50,6 +50,22 @@
     </ion-card-content>
   </ion-card>
 
+  <!-- Reto: tarjeta Ventas del día (nunca baja de 0) -->
+  <ion-card class="tarjeta-pop">
+    <ion-card-header>
+      <ion-card-title>Ventas del día</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <p class="contador">S/ {{ ventas }}</p>
+      <ion-button color="tertiary" (click)="restarVenta()" [disabled]="ventas === 0">
+        −S/ 1
+      </ion-button>
+      <ion-button color="secondary" (click)="sumarVenta()">
+        +S/ 1
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
   <!-- Lista: un mismo código, tres plataformas -->
   <ion-list [inset]="true">
     @for (p of plataformas; track p.nombre) {
